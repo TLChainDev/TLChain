@@ -5,15 +5,15 @@
       "params": {
         "stepDuration": "3",
         "blockReward": "0x1BC16D674EC80000",
-        "blockRewardContractAddress": "0x6d18066D89b6578693810DCeB1E22106B8cB976C",
+        "blockRewardContractAddress": "0x166c5f2c8506c522E8000f8d0CC36657746F30Da",
         "blockRewardContractTransition": 100,
         "validators": {
           "multi": {
             "0": {
-              "list": ["0xbf72e4c7f9796906a5ec00330589fa978619f08d"]
+              "list": ["0x8335c47e56cf0798d34c14550d9622e841851851"]
             },
             "100": {
-              "safeContract": "0x786Aa3227317A2e513cFE20c5897F122650bd671"
+              "safeContract": "0xc7DfDF919864844943628c2C150F67829327C90E"
             }
           }
         }
@@ -24,7 +24,7 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID" : "0x8B0",
+    "networkID" : "0x911",
     "eip155Transition": 0,
     "validateChainIdTransition": 0,
     "eip140Transition": 0,
@@ -69,6 +69,6 @@
       "0x0000000000000000000000000000000000000007": { "builtin": { "name": "alt_bn128_mul", "pricing": { "0": { "price": { "alt_bn128_const_operations": { "price": 4000 } } }, "0x96": { "info": "EIP-1108 Istanbul HF", "price": { "alt_bn128_const_operations": { "price": 6000 } } } } } },
       "0x0000000000000000000000000000000000000008": { "builtin": { "name": "alt_bn128_pairing", "pricing": { "0": { "price": { "alt_bn128_pairing": { "base": 100000, "pair": 80000 } } }, "0x96": { "info": "EIP-1108 Istanbul HF", "price": { "alt_bn128_pairing": { "base": 45000, "pair": 34000 } } } } } },
       "0x0000000000000000000000000000000000000009": { "builtin": { "name": "blake2_f", "pricing": { "0x96": { "info": "EIP-152 Istanbul HF", "price": { "blake2_f": { "gas_per_round": 1 } } } } } },
-      "0x96a36D948cF5720Cb5faa3D3f369d357E58e1405": { "balance": "200000000000000000000000000" }
+      "0xA883BaBce7B8566C69714e9E49Fb5dFA9Ee3088B": { "balance": "200000000000000000000000000" }
   }
 }
