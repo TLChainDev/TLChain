@@ -35,16 +35,16 @@ reseal_on_txs = "none"
 ```
 5. Stake and/or delegate!
 
-Stake
+    Stake
 
-To stake TLC coin, all you should do is sending your TLC coin to the TLChain Consensus contract address over the TLChain network from the validator address.
-The TLChain Consensus contract address: 0xc7DfDF919864844943628c2C150F67829327C90E
-The easiest way to do so, is to import your private key or key-store file to your favourite wallet (for example Metamask), switch network to TLChain and send the TLC coin to the Consensus contract address.
+    To stake TLC coin, all you should do is sending your TLC coin to the TLChain Consensus contract address over the TLChain network from the validator address.
+    The TLChain Consensus contract address: 0xc7DfDF919864844943628c2C150F67829327C90E
+    The easiest way to do so, is to import your private key or key-store file to your favourite wallet (for example Metamask), switch network to TLChain and send the TLC coin to the Consensus contract address.
 
-You can find your key-store (containing your private key) and the password for the created account in:
-/TLChain/nodes/validator/keys/TLChain/UTC--xxxx
-/TLChain/nodes/validator/node.pwd
+    You can find your key-store (containing your private key) and the password for the created account in:
+    /TLChain/nodes/validator/keys/TLChain/UTC--xxxx
+    /TLChain/nodes/validator/node.pwd
 
 6. Wait for 1 cycle (approximately 48 hours).
 
-Wait until the next cycle gets started.
+    Wait until the next cycle gets started.
