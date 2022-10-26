@@ -33,7 +33,7 @@ reseal_on_txs = "none"
 ./openethereum --config ./nodes/validator/node.toml
 
 ```
-5. Stake and/or delegate!
+5. Stake
 
     Stake
 
