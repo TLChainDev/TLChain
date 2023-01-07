@@ -1,16 +1,18 @@
 # Run a TLChain Validator
 ## Setting up a node
-1. Git clone https://github.com/TLChainDev/TLChain.git
-
+```
+1. git clone https://github.com/TLChainDev/TLChain.git
+```
 2. Copy source form node-example to root folder
 ```
-cp -r TLChain/node-example/TLChain/root/
+cd TLChain
+cp -r node-example/ /root/
 ```
 3. Create an Account
 
 ```
 cd /root/TLChain
-./openethereum account new --config nodes/moc/moc.toml
+./openethereum account new --chain ./spec/spec.json --keys-path ./nodes/validator//keys
 ```
 Returned address like that 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2
 
