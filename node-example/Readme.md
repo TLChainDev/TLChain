@@ -1,7 +1,7 @@
 # Run a TLChain Validator
 ## Setting up a node
 ```
-1. git clone https://github.com/TLChainDev/TLChain.git
+git clone https://github.com/TLChainDev/TLChain.git
 ```
 2. Copy source form node-example to root folder
 ```
