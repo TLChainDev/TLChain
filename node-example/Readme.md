@@ -15,8 +15,11 @@ cd /root/node-example/TLChain
 ./openethereum account new --chain ./spec/spec.json --keys-path ./nodes/validator//keys
 ```
 Returned address like that 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2
-
-Copy result address to mode.toml
+```
+cd nodes/validator/
+vi node.toml
+```
+Copy result address to node.toml
 Ex:
 ```
 ...
@@ -30,6 +33,7 @@ engine_signer = "0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2"
 reseal_on_txs = "none"
 ...
 ```
+Update also the password on node.pwd in the same folder
 4. Run the authority nodes
 ```
 ./openethereum --config ./nodes/validator/node.toml
