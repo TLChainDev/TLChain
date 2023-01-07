@@ -11,7 +11,7 @@ cp -r node-example/ /root/
 3. Create an Account
 
 ```
-cd /root/TLChain
+cd /root/node-example/TLChain
 ./openethereum account new --chain ./spec/spec.json --keys-path ./nodes/validator//keys
 ```
 Returned address like that 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2
