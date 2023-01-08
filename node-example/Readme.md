@@ -42,7 +42,23 @@ reseal_on_txs = "none"
     The easiest way to do so, is to import your private key or key-store file to your favourite wallet (for example Metamask), switch network to TLChain and send the TLC coin to the Consensus contract address.
 
     You can find your key-store (containing your private key) and the password for the created account in:
-    /TLChain/nodes/validator/keys/TLChain/UTC--xxxx
+    /TLChain/nodes/validator/keys/TLChain/UTC--xxxx - This file is encrypted and you need to decrypt to find your private key
+Step 1: Install python3. like ```apt get install python3```
+Step 2: Install python pip like ```apt get install python3-pip```
+Step 3: Install web3 pip ```pip3 install w3```
+Step 4: Create a python script to decrypt the file ```touch decrypt.py```
+Step 5: Edit the file ```vi decrypt.py``` and add this code
+
+```
+from web3.auto import w3
+with open("/root/TLChain/nodes/validator/keys/TLChain/UTC--xxxx") as keyfile:
+ encrypted_key = keyfile.read()
+ private_key = w3.eth.account.decrypt(encrypted_key, 'password') # you need to modify this with your password
+
+import binascii
+print("This is your private key: ")
+print(binascii.b2a_hex(private_key))
+```
     /TLChain/nodes/validator/node.pwd
 
 6. Wait for 1 cycle (approximately 48 hours).
