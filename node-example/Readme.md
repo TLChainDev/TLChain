@@ -43,10 +43,15 @@ reseal_on_txs = "none"
 
     You can find your key-store (containing your private key) and the password for the created account in:
     /TLChain/nodes/validator/keys/TLChain/UTC--xxxx - This file is encrypted and you need to decrypt to find your private key
+    
 Step 1: Install python3. like ```apt get install python3```
+
 Step 2: Install python pip like ```apt get install python3-pip```
+
 Step 3: Install web3 pip ```pip3 install w3```
+
 Step 4: Create a python script to decrypt the file ```touch decrypt.py```
+
 Step 5: Edit the file ```vi decrypt.py``` and add this code
 
 ```
