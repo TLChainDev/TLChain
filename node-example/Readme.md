@@ -1,20 +1,25 @@
 # Run a TLChain Validator
 ## Setting up a node
-1. Git clone https://github.com/TLChainDev/TLChain.git
-
+```
+git clone https://github.com/TLChainDev/TLChain.git
+```
 2. Copy source form node-example to root folder
 ```
-cp -r TLChain/node-example/TLChain/root/
+cd TLChain
+cp -r node-example/ /root/
 ```
 3. Create an Account
 
 ```
-cd /root/TLChain
-./openethereum account new --config nodes/moc/moc.toml
+cd /root/node-example/TLChain
+./openethereum account new --chain ./spec/spec.json --keys-path ./nodes/validator//keys
 ```
 Returned address like that 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2
-
-Copy result address to mode.toml
+```
+cd nodes/validator/
+vi node.toml
+```
+Copy result address to node.toml
 Ex:
 ```
 ...
@@ -28,6 +33,7 @@ engine_signer = "0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2"
 reseal_on_txs = "none"
 ...
 ```
+Update also the password on node.pwd in the same folder
 4. Run the authority nodes
 ```
 ./openethereum --config ./nodes/validator/node.toml
@@ -44,6 +50,28 @@ reseal_on_txs = "none"
     You can find your key-store (containing your private key) and the password for the created account in:
     /TLChain/nodes/validator/keys/TLChain/UTC--xxxx
     /TLChain/nodes/validator/node.pwd
+
+    
+Step 1: Install python3. like ```apt get install python3```
+
+Step 2: Install python pip like ```apt get install python3-pip```
+
+Step 3: Install web3 pip ```pip3 install w3```
+
+Step 4: Create a python script to decrypt the file ```touch decrypt.py```
+
+Step 5: Edit the file ```vi decrypt.py``` and add this code
+
+```
+from web3.auto import w3
+with open("/root/TLChain/nodes/validator/keys/TLChain/UTC--xxxx") as keyfile:
+ encrypted_key = keyfile.read()
+ private_key = w3.eth.account.decrypt(encrypted_key, 'password') # you need to modify this with your password
+
+import binascii
+print("This is your private key: ")
+print(binascii.b2a_hex(private_key))
+```
 
 6. Wait for 1 cycle (approximately 48 hours).
 
